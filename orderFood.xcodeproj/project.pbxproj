@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		6278E7D229277B6600B02E27 /* Dishes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6278E7D129277B6600B02E27 /* Dishes.swift */; };
 		6278E7D429277BEF00B02E27 /* DisheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6278E7D329277BEF00B02E27 /* DisheType.swift */; };
+		6278E7D729277F8100B02E27 /* dishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6278E7D629277F8100B02E27 /* dishView.swift */; };
+		6278E7DA2927876200B02E27 /* dishesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6278E7D92927876200B02E27 /* dishesRepository.swift */; };
+		6278E7DC29278BCE00B02E27 /* allMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6278E7DB29278BCE00B02E27 /* allMenuView.swift */; };
+		6278E7DE2927931900B02E27 /* BillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6278E7DD2927931900B02E27 /* BillView.swift */; };
 		62B8BCC12927789A00C61F4C /* orderFoodApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B8BCC02927789A00C61F4C /* orderFoodApp.swift */; };
 		62B8BCC32927789A00C61F4C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B8BCC22927789A00C61F4C /* ContentView.swift */; };
 		62B8BCC52927789A00C61F4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62B8BCC42927789A00C61F4C /* Assets.xcassets */; };
@@ -38,6 +42,10 @@
 /* Begin PBXFileReference section */
 		6278E7D129277B6600B02E27 /* Dishes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dishes.swift; sourceTree = "<group>"; };
 		6278E7D329277BEF00B02E27 /* DisheType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisheType.swift; sourceTree = "<group>"; };
+		6278E7D629277F8100B02E27 /* dishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dishView.swift; sourceTree = "<group>"; };
+		6278E7D92927876200B02E27 /* dishesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dishesRepository.swift; sourceTree = "<group>"; };
+		6278E7DB29278BCE00B02E27 /* allMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allMenuView.swift; sourceTree = "<group>"; };
+		6278E7DD2927931900B02E27 /* BillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillView.swift; sourceTree = "<group>"; };
 		62B8BCBD2927789A00C61F4C /* orderFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orderFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B8BCC02927789A00C61F4C /* orderFoodApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderFoodApp.swift; sourceTree = "<group>"; };
 		62B8BCC22927789A00C61F4C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,9 +84,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6278E7D529277F6100B02E27 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				6278E7D629277F8100B02E27 /* dishView.swift */,
+				6278E7DB29278BCE00B02E27 /* allMenuView.swift */,
+				6278E7DD2927931900B02E27 /* BillView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		6278E7D82927875100B02E27 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				6278E7D92927876200B02E27 /* dishesRepository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
 		62B8BCB42927789A00C61F4C = {
 			isa = PBXGroup;
 			children = (
+				6278E7D82927875100B02E27 /* repository */,
+				6278E7D529277F6100B02E27 /* views */,
 				62B8BCEB292779B400C61F4C /* Data */,
 				62B8BCBF2927789A00C61F4C /* orderFood */,
 				62B8BCD12927789B00C61F4C /* orderFoodTests */,
@@ -274,9 +302,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				62B8BCC32927789A00C61F4C /* ContentView.swift in Sources */,
+				6278E7D729277F8100B02E27 /* dishView.swift in Sources */,
 				6278E7D429277BEF00B02E27 /* DisheType.swift in Sources */,
+				6278E7DC29278BCE00B02E27 /* allMenuView.swift in Sources */,
 				62B8BCC12927789A00C61F4C /* orderFoodApp.swift in Sources */,
 				6278E7D229277B6600B02E27 /* Dishes.swift in Sources */,
+				6278E7DA2927876200B02E27 /* dishesRepository.swift in Sources */,
+				6278E7DE2927931900B02E27 /* BillView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +459,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = orderFood/orderFood.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -466,7 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = orderFood/orderFood.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

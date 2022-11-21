@@ -6,7 +6,9 @@
 //
 
 import Foundation
-struct Dishe{
+struct Dishe : Identifiable{
+    let id = UUID()
+    var numberOfDishes:Bool=false
     var dishType:String
     var dishes:Array<Dishes>
 }

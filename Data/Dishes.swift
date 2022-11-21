@@ -6,7 +6,10 @@
 //
 
 import Foundation
-struct Dishes{
+struct Dishes: Identifiable{
+    let id = UUID()
+
     var name:String
     var price:Float
+    var isSelected=false
 }
