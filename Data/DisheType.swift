@@ -6,9 +6,9 @@
 //
 
 import Foundation
-struct Dishe : Identifiable{
+struct Menu : Identifiable{
     let id = UUID()
     var numberOfDishes:Bool=false
     var dishType:String
-    var dishes:Array<Dishes>
+    var dishes:Array<Dishe>
 }

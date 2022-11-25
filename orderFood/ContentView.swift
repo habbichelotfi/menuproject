@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var repository = DishesRepository.shared
-    
+   
     
     var body: some View {
         ScrollView(.vertical){
@@ -18,23 +18,35 @@ struct ContentView: View {
                 .font(.system(size: 30))
                 .fontWeight(.bold)
             VStack {
-                ForEach($repository.dishes) { $dishes in allMenuView(menu: $dishes,manyAreSelected: $repository.isMoreSelected)
+                ForEach($repository.dishes) { $dishes in allMenuView(menu: $dishes)
             }
-//                Text("\(repository.getBill())")
                 HStack{
                     Text("Total Amount").font(.system(size: 20)).fontWeight(.bold)
                     Spacer()
                     Text("\(String(format: "%.2f", repository.getBill()))").font(.system(size: 20)).fontWeight(.bold)
-                    
+                    Text("$")
                 }.padding()
-                    NavigationLink(destination: BillView(amount:
-                            repository.getBill())) {
+                
+                Divider()
+                if repository.getBill()==0.0{
+                Text("Order")
                         
-                        Button("Order"){
+                        .frame(maxWidth: .infinity,minHeight: 45).background(Color.gray.opacity(0.2)).foregroundColor(Color.black).padding()
+                        .font(.system(size:20))
+                        .cornerRadius(18)
+                }else{
+                    NavigationLink(destination: BillView(amount:
+                                                            repository.getBill(),selectedDishes: repository.getSelectedDishes())) {
                             
-                        }.frame(maxWidth: .infinity,minHeight: 35).background(.blue).foregroundColor(Color.white).padding()
+                        Text("Order")
+                                
+                            .frame(maxWidth: .infinity,minHeight: 45).background(.blue).foregroundColor(Color.white).padding()
                             
-                   }
+                                .font(.system(size:20))
+                                .cornerRadius(18)
+                       }
+                }
+               
               
                     
             }

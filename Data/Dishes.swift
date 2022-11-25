@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct Dishes: Identifiable{
+struct Dishe: Identifiable,Equatable{
     let id = UUID()
 
     var name:String

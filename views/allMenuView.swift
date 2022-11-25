@@ -8,29 +8,38 @@
 import SwiftUI
 
 struct allMenuView: View {
-    @Binding var menu:Dishe
-    @Binding var manyAreSelected:Bool
+    @Binding var menu:Menu
+    
+    func handler(menu_:Dishe)->(){
+        
+        for i in 0..<(menu.dishes.count){
+            if menu_.isSelected && menu.dishes[i].isSelected && !(menu_.name==menu.dishes[i].name)
+            {
+                menu.dishes[i].isSelected=false
+            }
+            
+        }
+    }
     var body: some View {
         VStack{
             Text("\(menu.dishType)").frame(maxWidth: .infinity,alignment: .leading).padding().fontWeight(.bold)
             ForEach($menu.dishes){
-                $dish in dishView(dish: $dish)
-            }.alert(isPresented: $menu.numberOfDishes) {
-                Alert(title: Text("Important message"), message: Text("Wear sunscreen"), dismissButton: .default(Text("Got it!")))
+                $dish in dishView(dish: $dish, handler: handler)
             }
-        }
+            Divider()
+        }.padding(EdgeInsets(top: 0, leading: 18.0, bottom: 0, trailing: 18.0))
     }
-    func getif(){
-        
-    }
+   
 }
 
 struct allMenuView_Previews: PreviewProvider {
+
+	
     static var previews: some View {
-        allMenuView(menu:
-                .constant(Dishe(dishType: "Menu", dishes: [
-            Dishes(name: "Pasta", price: 10.5),
-            Dishes(name: "Pasta", price: 0.5)
-                ])),manyAreSelected: .constant(false))
+                allMenuView(menu:
+                .constant(Menu(dishType: "Menu", dishes: [
+            Dishe(name: "Pasta", price: 10.5),
+            Dishe(name: "Pasta", price: 0.5)
+                ])))
     }
 }

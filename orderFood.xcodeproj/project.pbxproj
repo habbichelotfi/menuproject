@@ -20,6 +20,7 @@
 		62B8BCD32927789B00C61F4C /* orderFoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B8BCD22927789B00C61F4C /* orderFoodTests.swift */; };
 		62B8BCDD2927789B00C61F4C /* orderFoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B8BCDC2927789B00C61F4C /* orderFoodUITests.swift */; };
 		62B8BCDF2927789B00C61F4C /* orderFoodUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B8BCDE2927789B00C61F4C /* orderFoodUITestsLaunchTests.swift */; };
+		62BE5C512930C05100A3D22B /* CheckBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BE5C502930C05100A3D22B /* CheckBoxStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		62B8BCD82927789B00C61F4C /* orderFoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = orderFoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B8BCDC2927789B00C61F4C /* orderFoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderFoodUITests.swift; sourceTree = "<group>"; };
 		62B8BCDE2927789B00C61F4C /* orderFoodUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderFoodUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		62BE5C502930C05100A3D22B /* CheckBoxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		62B8BCB42927789A00C61F4C = {
 			isa = PBXGroup;
 			children = (
+				62BE5C4F2930C03700A3D22B /* style */,
 				6278E7D82927875100B02E27 /* repository */,
 				6278E7D529277F6100B02E27 /* views */,
 				62B8BCEB292779B400C61F4C /* Data */,
@@ -169,6 +172,14 @@
 				6278E7D329277BEF00B02E27 /* DisheType.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		62BE5C4F2930C03700A3D22B /* style */ = {
+			isa = PBXGroup;
+			children = (
+				62BE5C502930C05100A3D22B /* CheckBoxStyle.swift */,
+			);
+			path = style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62BE5C512930C05100A3D22B /* CheckBoxStyle.swift in Sources */,
 				62B8BCC32927789A00C61F4C /* ContentView.swift in Sources */,
 				6278E7D729277F8100B02E27 /* dishView.swift in Sources */,
 				6278E7D429277BEF00B02E27 /* DisheType.swift in Sources */,
