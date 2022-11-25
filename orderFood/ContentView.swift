@@ -18,8 +18,10 @@ struct ContentView: View {
                 .font(.system(size: 30))
                 .fontWeight(.bold)
             VStack {
-                ForEach($repository.dishes) { $dishes in allMenuView(menu: $dishes)
-            }
+                ForEach($repository.dishes) {
+                    $dishes in allMenuView(menu: $dishes)
+                    
+                }
                 HStack{
                     Text("Total Amount").font(.system(size: 20)).fontWeight(.bold)
                     Spacer()

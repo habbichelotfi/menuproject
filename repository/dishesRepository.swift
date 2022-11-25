@@ -17,9 +17,7 @@ class DishesRepository : ObservableObject{
             Dishe(name: "Pizza"    , price: 2.4),
             Dishe(name: "sandwich"    , price: 2.4)
             
-        ]
-              
-             ),
+        ]),
         Menu(dishType: "Side dishes", dishes: [
             Dishe(name: "Chips"    , price: 2.4),
             Dishe(name: "Salade"    , price: 2.4),
@@ -27,7 +25,7 @@ class DishesRepository : ObservableObject{
         ]),
         Menu(dishType: "Dessert", dishes: [
             Dishe(name: "Fruits"    , price: 2.4),
-            Dishe(name: "iceCream"    , price: 2.4),
+            Dishe(name: "iceCream"    , price: 4.4),
             
         ])
         
